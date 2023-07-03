@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Purple-Blue: hsl(238, 22%, 44%);
+    /* Accent */
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Cyan: hsl(170, 45%, 43%);
+    --Red: hsl(5, 75%, 50%);
+    /* Neutral */
+    --Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+    --White: hsl(0, 0%, 100%);
+    /* Shadow */
+    --Shadow: 0px 1px 3px hsl(243, 87%, 12%, 0.5);
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Raleway', 'Open Sans', sans-serif;
+    line-height: 1.5;    
+}
+
+/* ----------
+    UTILITIES
+---------- */
+
+.container {
+    max-width: 90rem;
+    margin: auto;
+    padding: 3rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.flex {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+h1,
+h2, 
+p {
+    margin-bottom: 1.5rem;
+    color: var(--Very-Dark-Blue);
+}
+
+a {
+    text-decoration: none;
+    color: var(--Very-Dark-Blue);
+}
+
+ul {
+    list-style: none;
+}
+
+.heading {
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+.text {
+    font-family: 'Open Sans';
+}
+
+.input_error {
+    border: 1px solid var(--Red);
+}
+
+.error_message {
+    color: var(--Red);
+}
+
+.hidden {
+    display: none;
+}
+
+.signup,
+.testimony,
+.early_access {
+    width: 80%;
+}
+
+.--white {
+    color: var(--White);
+}
+
+/* ----------
+    NAVBAR
+---------- */
+
+.nav__logo {
+    display: block;
+    margin-left: 0;
+}
+
+.nav__link {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+/* ----------
+    HERO
+---------- */
+
+#email {
+    position: relative;
+    margin-right: 1rem;
+    width: 70%;
+    padding: .65rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#email,
+.btn,
+.card {
+    border-radius: .313rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--Bright-Blue);
+    border: none;
+    padding: .75rem 2rem;
+    cursor: pointer;
+    box-shadow: var(--Shadow);
+}
+
+.btn:hover {
+    background: hsl(224, 90%, 67%);
+}
+
+.btn:active {
+    background: hsl(224, 49%, 48%);
+}
+
+.error {
+    position: absolute;
+    margin-top: 2.5rem;
+}
+
+.hero {
+    width: 100%;
+}
+
+/* ----------
+    TESTIMONIES
+---------- */
+main {
+    background: var(--Grayish-Blue);
+    padding-bottom: 5rem;
+}
+
+.curve {
+    max-width: 90rem;
+    margin: auto;
+}
+
+.how {
+    color: var(--Cyan);
+    text-decoration: underline;
+}
+
+.arrow {
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.how:hover,
+.arrow:hover {
+    cursor: pointer;
+    color: hsl(170, 55%, 55%);
+}
+
+.card {
+    margin-top: 2rem;
+    background: var(--White);
+    box-shadow: var(--Shadow);
+    width: 75%;
+    padding: 2rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 2.5rem;
+}
+
+.name {
+    display: inline-block;
+}
+
+span {
+    font-weight: 700;
+}
+
+/* ----------
+    EARLY ACCESS 
+---------- */
+section {
+    background: var(--Purple-Blue);
+}
+
+.get_started {
+    margin-top: 5rem;
+}
+
+.get_started #email {
+    width: 90%;
+    /* margin-bottom: 1.5rem; */
+}
+
+.get_started .btn {
+    display: block;
+}
+
+
+/* ----------
+    FOOTER 
+---------- */
+
+footer {
+    background: var(--Very-Dark-Blue);
+    padding-top: 3rem;
+}
+
+footer .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+footer .flex {
+    justify-content: space-evenly;
+}
+
+footer .foot_logo {
+    color: hsl(0, 0%, 100%);
+}
+
+.icon {
+    margin: 1rem 1rem 0 0;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.icon:hover,
+.footer_link:hover {
+    color: var(--Bright-Blue);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+p.attribution {
+    margin-bottom: 0;
+}
+
+
+/* -----------
+    MEDIA QUERIES 
+---------- */
+
+@media screen and (max-width: 768px) {
+
+    .grid,
+    footer .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .flex {
+        justify-content: space-evenly;
+    }
+
+    footer .flex {
+        justify-content: center;
+    }
+
+    footer {
+        padding: 3rem;
+    }
+
+    img {
+        grid-row: 1/2;
+    }
+
+    .heading {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .testimony .heading {
+        font-size: 1rem;
+    }
+
+    .testimony .text {
+    text-align: left;
+   }
+
+    .signup,
+    .testimony,
+    .early_access {
+        text-align: center;
+        margin: auto;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    P.testimony,
+    .card {
+        text-align: left;
+    }
+
+    #email,
+    .get_started #email,
+    .btn {
+        margin: 1rem auto;
+        display: block;
+        height: 3rem;
+    }
+
+    #email,
+    .btn {
+        width: 80%;
+    }
+
+    .get_started {
+        margin-top: 0;
+    }
+
+    .get_started #email {
+        width: 80%;
+    }
+
+    .column2,
+    .column3 {
+        margin-top: 2rem;
+    }
+
+    a .footer_link {
+        margin-top: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        padding: 3rem 2rem;
+    }
+
+    .grid {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    img {
+        margin: auto;
+    }
+}
